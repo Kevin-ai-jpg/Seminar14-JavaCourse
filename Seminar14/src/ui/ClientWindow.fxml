@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ClientWindowController">
+   <children>
+      <Label layoutX="25.0" layoutY="14.0" text="Rooms" />
+      <ListView id="roomsListView" fx:id="roomsListView" layoutX="25.0" layoutY="31.0" prefHeight="200.0" prefWidth="566.0" />
+      <Label layoutX="479.0" layoutY="317.0" text="Add Booking Period" />
+      <Button id="bookButton" fx:id="bookButton" layoutX="543.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleBookButton" text="Book" />
+      <TextArea id="desciptionsTextArea" fx:id="desciptionsTextArea" editable="false" layoutX="25.0" layoutY="271.0" onMouseClicked="#handleRoomSelection" prefHeight="109.0" prefWidth="406.0" />
+      <Label layoutX="25.0" layoutY="242.0" text="Room Description" />
+      <TextField id="dateField" fx:id="dateField" layoutX="437.0" layoutY="334.0" />
+   </children>
+</AnchorPane>

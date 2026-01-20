@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.StaffWindowController">
+   <children>
+      <Label layoutX="24.0" layoutY="14.0" text="Rooms" />
+      <ListView fx:id="roomsListView" layoutX="24.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="256.0" layoutY="14.0" text="Bookings" />
+      <ListView fx:id="bookingsListView" layoutX="256.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="477.0" layoutY="14.0" text="Total Price" />
+      <TextField fx:id="price" editable="false" layoutX="477.0" layoutY="31.0" prefHeight="25.0" prefWidth="96.0" />
+      <TextArea fx:id="bookingsForRoomTextArea" editable="false" layoutX="24.0" layoutY="276.0" onMouseClicked="#handleRoomSelection" prefHeight="110.0" prefWidth="200.0" />
+      <Label layoutX="24.0" layoutY="243.0" text="Bookings for selected room" />
+   </children>
+</AnchorPane>
