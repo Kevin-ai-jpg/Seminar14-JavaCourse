@@ -22,14 +22,16 @@ public class BookingsRepository {
             throw new RuntimeException(e);
         }
     }
+    public String BookingPeriodFormatter(String s, String e) {
+        return s + " to " + e;
+    }
 
     public void addBooking(int clientId, int roomNumber, String startDate, String endDate) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO Bookings (ClientID, RoomNumber, StartDate, EndDate) VALUES (?, ?, ?, ?)");
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO Bookings (ClientID, RoomNumber, BookingPeriod) VALUES (?, ?, ?)");
             preparedStatement.setInt(1, clientId);
             preparedStatement.setInt(2, roomNumber);
-            preparedStatement.setString(3, startDate);
-            preparedStatement.setString(4, endDate);
+            preparedStatement.setString(3, BookingPeriodFormatter(startDate, endDate));
             preparedStatement.executeUpdate();
         } catch (Exception e) {
             throw new RuntimeException(e);

@@ -47,12 +47,13 @@ public class StaffWindowController implements Observer {
             // Load all bookings
             bookingObservableList = javafx.collections.FXCollections.observableArrayList(hotelService.getAllBookings());
             bookingsListView.setItems(bookingObservableList);
-
+            update();
             // Calculate total price of all bookings
-            int totalPrice = hotelService.getTotalPriceOfBookingsFromDate("2023-01-21");
+            int totalPrice = hotelService.getTotalPriceOfBookingsFromDate("2024-01-01");
+            System.out.println(totalPrice);
             price.setText(String.valueOf(totalPrice));
 
-            update();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -86,7 +87,7 @@ public class StaffWindowController implements Observer {
                 bookingsListView.setItems(bookingObservableList);
 
                 // Update total price
-                int totalPrice = hotelService.getTotalPriceOfBookingsFromDate("2026-01-21");
+                int totalPrice = hotelService.getTotalPriceOfBookingsFromDate("2024-01-21");
                 price.setText(String.valueOf(totalPrice));
             } catch (Exception e) {
                 e.printStackTrace();
